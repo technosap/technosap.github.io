@@ -1,0 +1,236 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Nunito+Sans" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="static/styles.css">
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+  font: 400 30px/1.8 "PT Serif";
+  color: #777;
+}
+
+.bgimg-1, .bgimg-2, .bgimg-3,.bgimg-4,.bgimg-5,.bgimg-6 {
+  position: relative;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+.bgimg-1 {
+  background-image: url("static/back1.png");
+  min-height: 100%;
+}
+
+.bgimg-2 {
+  background-image: url("static/back2.jpeg");
+  min-height: 600px;
+}
+
+.bgimg-3 {
+  background-image: url("static/back3.jpg");
+  min-height: 600px;
+}
+
+.bgimg-4 {
+  background-image: url("static/back4.png");
+  min-height: 600px;
+}
+
+.bgimg-5 {
+  background-image: url("static/back5.jpg");
+  min-height: 600px;
+}
+
+.bgimg-6 {
+  background-image: url("static/back6.JPG");
+  min-height: 100%;
+}
+
+.caption {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+}
+
+.caption span.border {
+  background-color: #111;
+  color: #fff;
+  padding: 18px;
+  font-size: 25px;
+  letter-spacing: 10px;
+}
+
+h3 {
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font: 40px "Lato", sans-serif;
+  color: #111;
+}
+
+ul{
+  list-style-type: none;
+  margin: 0;
+  padding:0px;
+  overflow: hidden; 
+}
+li{
+  float: right;
+  font-family: "Lato";
+  font-size: 20px; 
+}
+li a{
+  display: block;
+  color: whitesmoke;
+  opacity: 0.65;
+  text-align: center;
+  padding: 15px;
+  text-decoration: none;
+}
+li a:hover{
+  background-color: #777;
+}
+.modal {
+    line-height: 200px;
+    position: fixed;
+    bottom: 0%; 
+    right: 5%;
+    opacity: 0.55;
+    margin-top: -100px;
+    margin-left: -150px;
+    border-radius: 5px;
+    text-align: left;
+    z-index: 11; /* 1px higher than the overlay layer */
+}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1024px) {
+    .bgimg-1, .bgimg-2, .bgimg-3 {
+        background-attachment: scroll;
+    }
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
+</head>
+<body>
+
+<div class="modal"><a href="#top" style="text-decoration: none"><img src="static/bk.png" style="height: 50px"></img></a></div>
+<div class="bgimg-1" id="top">
+  <ul>
+  <li><a href="index.html">home </a></li>
+  <li><a href="1.html">contact </a></li>
+  <li><a href="portfolio.html">portfolio</a></li>
+  <li><a href="1.html">commercial products</a></li>
+</ul>
+  <div class="caption">
+<a class="border" href="#intro" style="font-size: 30px;text-decoration: none;"><b style="font-family: 'Nunito Sans',sans-serif;color: black"><br><br><br><br> Here Starts the Journey<br></b>
+<img src="static/down.png" height="50px"></img></span>
+  </div>
+</div>
+
+<a href="#one"style="text-decoration: none;">
+<div style="color: #777;background-color:white;text-align:center;padding:50px 80px;text-align: justify;" id="intro">
+  <a href="#one"style="text-decoration: none;">
+  <h3 style="text-align:center;font-size: 175px;font-family: 'Oswald',sans-serif;">Hello</h3>
+  <p style="font-size: 20px;text-align: center;font-family: 'Nunito Sans',sans-serif;">This is me, Saptarshi Soham Mohanta aka TechnoSap, but you can call me Sapta or Sappy.<br> You might think I am just another student/freelancer but thats not all who i am... </p>
+  
+</div>
+</a>
+
+<a href="#two"style="text-decoration: none;">
+<div class="bgimg-2" id="one">
+  <div class="caption">
+    <span class="border" style="text-align: right;background-color:transparent;font-size:25px;color: #f7f7f7;position:absolute;right: 10%;font-style: italic">I'm a Computer Geek</span>
+  </div>
+</div>
+
+<div style="position:relative;">
+  <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+    <p style="font-style: italic">A programmer never gives up. Check again. ALWAYS Check again..</p>
+  </div>
+</div>
+</a>
+
+<a href="#three"style="text-decoration: none;">
+<div class="bgimg-3" id="two">
+  <div class="caption">
+    <span class="border" style="text-align: left;background-color:transparent;font-size:25px;color: #111;position: absolute;left: 100px;font-style: italic">And a Science and Mathematics Nerd</span>
+  </div>
+</div>
+
+<div style="position:relative;">
+  <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+    <p style="font-style: italic">A scientists journey never ends...</p>
+  </div>
+</div>
+</a>
+
+<a href="#four"style="text-decoration: none;">
+<div class="bgimg-4" id="three">
+  <div class="caption">
+    <span class="border" style="text-align: right;background-color:transparent;font-size:25px;color: #111;position:absolute;right: 10%;font-style: italic">And a Game Developer</span>
+  </div>
+</div>
+
+<div style="position:relative;">
+  <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+    <p style="font-style: italic">Beauty lies in making stories and imagination come alive...</p>
+  </div>
+</div>
+</a>
+
+<a href="#five"style="text-decoration: none;">
+<div class="bgimg-5" id="four">
+  <div class="caption">
+    <span class="border" style="text-align: left;background-color:transparent;font-size:25px;color: #f7f7f7;position: absolute;left: 100px;font-style: italic">And also an artist</span>
+  </div>
+</div>
+
+<div style="position:relative;">
+  <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+    <p style="font-style: italic">What is life if not art...</p>
+  </div>
+</div
+</a>
+
+<div class="bgimg-6" id="five" style="top: 10%">
+<div style="position: absolute;top: 25%; text-align: justify;margin-left: 50%;margin-right: 5%; background-color: #282E34">
+<p style="font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;color:ghostwhite;font-size: 18px;padding: 40px">I also have a passion for DIY Experimentation and the digital arts especially 3-D Modelling,and Graphics Design. I do jobs too.<br><br>I work on mainly fusion art and coding. Doing one thing is boring, I like to mix it up. Mixing art, music, mathematical algorithms and genetics to create some thing new. Its just like cooking, flavors of different ingredients mixing up to give brand new textures and tastes. Oh! I forgot to mention I like to cook too.<br><br>I love listening to music and Im an anime Otaku.<br>I have a deep liking for trying new things, something others may be afraid to try because I believe that exploring the unknown is the way forward.<br><br>If you have time please check out my works.</p>
+</div>
+</div>
+</body>
+</html>
