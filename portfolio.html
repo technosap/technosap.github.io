@@ -2,6 +2,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Nunito+Sans" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
    <!-- <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;lang=en" /> -->
 <style>
 
@@ -12,7 +15,7 @@ body, html {
   color: #777;
 }
 
-.bgimg-1, .bgimg-2, .bgimg-3,.bgimg-4,.bgimg-5 {
+.bgimg-1, .bgimg-2,.bgimg-4,.bgimg-5 {
   position: relative;
   background-attachment: fixed;
   background-position: center;
@@ -30,13 +33,8 @@ body, html {
   min-height: 600px;
 }
 
-.bgimg-3 {
-  background-image: url("static/ArtsNPhoto.jpg");
-  min-height: 600px;
-}
-
 .bgimg-4 {
-  background-image: url("static/3d.jpg");
+  background-image: url("static/ArtsNPhoto.jpg");
   min-height: 600px;
 }
 
@@ -72,12 +70,12 @@ ul{
   list-style-type: none;
   margin: 0;
   padding:0px;
-  overflow: hidden; 
+  overflow: hidden;
 }
 li{
   float: right;
   font-family: "Lato";
-  font-size: 20px; 
+  font-size: 20px;
 }
 li a{
   display: block;
@@ -93,7 +91,7 @@ li a:hover{
 .modal {
     line-height: 200px;
     position: fixed;
-    bottom: 0%; 
+    bottom: 0%;
     right: 5%;
     opacity: 0.55;
     margin-top: -100px;
@@ -101,6 +99,40 @@ li a:hover{
     border-radius: 5px;
     text-align: left;
     z-index: 11; /* 1px higher than the overlay layer */
+}
+
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f7f7f7;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    opacity: 0.75;
+
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #999}
+
+/* Show the dropdown menu on hover */
+li:hover .dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+li:hover .dropbtn {
+    background-color: #3e8e41;
 }
 
 /* Turn off parallax scrolling for tablets and phones */
@@ -130,7 +162,7 @@ $(document).ready(function(){
       $('html, body').animate({
         scrollTop: $(hash).offset().top
       }, 800, function(){
-   
+
         // Add hash (#) to URL when done scrolling (default click behavior)
         window.location.hash = hash;
       });
@@ -145,13 +177,19 @@ $(document).ready(function(){
 <body>
 
 <div class="modal"><a href="#top" style="text-decoration: none"><img src="static/bk.png" style="height: 50px"></img></a></div>
-<div class="bgimg-1" id="top">
+<div class="bgimg-1"  id="top">
   <ul>
-    <li><a href="index.html">home </a></li>
-    <li><a href="1.html">contact </a></li>
-    <li><a href="portfolio.html">portfolio</a></li>
-    <li><a href="1.html">commercial products</a></li>
-  </ul>
+  <li><a href="index.html" style="color:white;opacity:0.85">home </a></li>
+  <li><a href="1.html" style="color:white;opacity:0.85" >contact </a></li>
+  <li><a href="portfolio.html" style="color:white;opacity:0.85">portfolio</a>
+    <div class="dropdown-content">
+      <a href="science.html">Science and Programming</a>
+      <a href="3d.html">Arts and Graphics Design</a>
+      <a href="1.html">Awards and Achievements</a>
+    </div>
+  </li>
+  <li><a href="1.html" style="color:white;opacity:0.85">commercial products</a></li>
+</ul>
 
     <a class="border" href="#Science" style="font-size: 30px;text-decoration: none;">
         <div class="caption">
@@ -172,7 +210,7 @@ $(document).ready(function(){
 </div>
 
 
-
+<!--
 <div class="bgimg-3" id="artp">
   <a href="artp.html"style="text-decoration: none;">
   <div class="caption">
@@ -182,13 +220,13 @@ $(document).ready(function(){
   </div>
   </a>
 </div>
-
+-->
 
 <div class="bgimg-4" id="3d">
   <a href="3d.html"style="text-decoration: none;">
   <div class="caption">
-    <span class="border" style="top:50%;text-align: left;background-color:transparent;font-size:50px;color: #f7f7f7;position:absolute;left: 10%;">3D Arts and Graphics Design<br>
-    <img src="static/Learn2.png" style="height: 40px"></img>
+    <span class="border" style="top:50%;text-align: right;background-color:transparent;font-size:50px;color: #111;position:absolute;right: 10%;">Arts and Graphics Design<br>
+    <img src="static/Learn.png" style="height: 40px"></img>
     </span>
   </div>
   </a>
@@ -198,7 +236,7 @@ $(document).ready(function(){
 <div class="bgimg-5" >
   <a href="award.html"style="text-decoration: none;">
   <div class="caption">
-    <span class="border" style="top:50%;text-align: right;background-color:transparent;font-size:50px;color: #f7f7f7;position:absolute;right: 10%;">Awards and Achievements<br>
+    <span class="border" style="top:50%;text-align: left;background-color:transparent;font-size:50px;color: #f7f7f7;position:absolute;left: 10%;">Awards and Achievements<br>
     <img src="static/Learn2.png" style="height: 40px"></img>
     </span>
   </div>
